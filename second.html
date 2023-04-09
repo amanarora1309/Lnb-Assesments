@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            height: 100vh;
+            width: 100vw;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .greet{
+            height: 10em;
+            width: 20em;
+            background-color: #785AF6;
+            border-radius: 5em;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5em;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="greet">
+            <h1>demo text</h1>
+        </div>
+    </div>
+
+    <script>
+        let h1 = document.getElementsByTagName("h1")[0];
+        let container = document.getElementsByClassName("container")[0];
+        let time = new Date().getHours();
+        let greeting
+        if(time >=5 && time < 12){
+            greeting = "Good Morning"
+            container.style.backgroundColor = "green";
+        }
+        else if(time >= 12 && time < 18){
+            greeting = "Good Afternoon"
+            container.style.backgroundColor = "yellow";
+        }
+        else{
+            greeting = "Good Evening"
+            container.style.backgroundColor = "gray";
+        }
+        h1.innerHTML = greeting
+    </script>
+</body>
+</html>

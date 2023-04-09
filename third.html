@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #btn{
+            padding: 0.5em;
+            font-size: 2em;
+            cursor: pointer;
+            border-radius: 0.5em;
+            background-color: #FF9A2E;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button id="btn">Roll</button>
+    </div>
+
+    <script>
+        btn.addEventListener("click", function() {
+            let number = Math.trunc(Math.random() * 6 + 1)
+            console.log(number) 
+            if(number == 1){
+                container.style.backgroundImage = "url('d1.jpg')"
+            }
+            else if(number == 2){
+                container.style.backgroundImage = "url('d2.jpg')"
+            }
+            else if(number == 3){
+                container.style.backgroundImage = "url('d3.jpg')"
+            }
+            else if(number == 4){
+                container.style.backgroundImage = "url('d4.jpg')"
+            }
+            else if(number == 5){
+                container.style.backgroundImage = "url('d5.jpg')"
+            }
+            else if(number == 6){
+                container.style.backgroundImage = "url('d6.jpg')"
+            }
+        })
+    </script>
+</body>
+</html>
